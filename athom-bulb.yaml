@@ -1,5 +1,5 @@
 substitutions:
-  device_name: "athom-rgbct-light"
+  name: "athom-rgbct-light"
   friendly_name: "Athom RGBCT Light"
   project_name: "athom.rgbct-light"
   project_version: "1.0"
@@ -7,7 +7,7 @@ substitutions:
   wifi_password: "JamesBond"
   
 esphome:
-  name: "${device_name}"
+  name: "${name}"
   name_add_mac_suffix: true
   project:
     name: "${project_name}"
