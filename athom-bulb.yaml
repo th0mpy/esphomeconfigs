@@ -2,8 +2,6 @@ substitutions:
   friendly_name: "Athom RGBCT Light"
   project_name: "athom.rgbct-light"
   project_version: "1.0"
-  wifi_ssid: "Spectre"
-  wifi_password: "JamesBond"
   
 esphome:
   name: "${name}"
