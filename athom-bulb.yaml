@@ -30,9 +30,8 @@ web_server:
   port: 80
 
 wifi:
-  networks:
-    ssid: ${wifi_ssid}
-    password: ${wifi_password}
+  ssid: ${wifi_ssid}
+  password: ${wifi_password}
   ap: {} # This spawns an AP with the device name and mac address with no password.
 
 captive_portal:
