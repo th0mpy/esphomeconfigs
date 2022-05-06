@@ -1,5 +1,4 @@
 substitutions:
-  name: "athom-rgbct-light"
   friendly_name: "Athom RGBCT Light"
   project_name: "athom.rgbct-light"
   project_version: "1.0"
