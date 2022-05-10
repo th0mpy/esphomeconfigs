@@ -65,7 +65,7 @@ output:
 
 light:
   - platform: rgbct
-    name: "Lamp"
+    name: "${friendly_name}"
     red: red_output
     green: green_output
     blue: blue_output
