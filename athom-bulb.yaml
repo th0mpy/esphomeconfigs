@@ -1,6 +1,6 @@
 substitutions:
-  friendly_name: "Athom RGBCT Light"
-  project_name: "athom.rgbct-light"
+  friendly_name: "Athom RGBWW Light"
+  project_name: "athom.rgbww-light"
   project_version: "1.0"
   
 esphome:
@@ -46,33 +46,32 @@ switch:
 
 output:
   - platform: esp8266_pwm
-    id: red_output
+    id: output_red
     pin: GPIO4
   - platform: esp8266_pwm
-    id: green_output
+    id: output_green
     pin: GPIO12
   - platform: esp8266_pwm
-    id: blue_output
+    id: output_blue
     pin: GPIO14
   - platform: esp8266_pwm
-    id: white_output
+    id: output_warm_white
     pin: GPIO13
   - platform: esp8266_pwm
-    id: ct_output
-    inverted: true
+    id: output_cold_white
     pin: GPIO5
-
-
+    
 light:
-  - platform: rgbct
-    name: "${friendly_name}"
-    red: red_output
-    green: green_output
-    blue: blue_output
-    white_brightness: white_output
-    color_temperature: ct_output
-    cold_white_color_temperature: 153 mireds
-    warm_white_color_temperature: 500 mireds
+  - platform: rgbww
+    name: "${upper_devicename}"
+    red: output_red
+    green: output_green
+    blue: output_blue
+    cold_white: output_cold_white
+    warm_white: output_warm_white
+    cold_white_color_temperature: 6000 K
+    warm_white_color_temperature: 2700 K
+    #restore_mode: ALWAYS_ON
     color_interlock: true
 
 text_sensor:
@@ -80,3 +79,5 @@ text_sensor:
     ip_address:
       name: "${friendly_name} IP Address"
       disabled_by_default: true
+      
+      
