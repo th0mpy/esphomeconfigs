@@ -1,3 +1,48 @@
+substitutions:
+  friendly_name: "Aoycocr X5P"
+  project_name: "aoycocr.x5p"
+  project_version: "1.0"
+  
+esphome:
+  name: "${name}"
+  name_add_mac_suffix: true
+  project:
+    name: "${project_name}"
+    version: "${project_version}"
+
+dashboard_import:
+  package_import_url: github://th0mpy/esphomeconfigs/aoycocr_x5p.yaml
+
+
+esp8266:
+  board: esp8285
+ 
+api:
+
+ota:
+
+logger:
+
+web_server:
+  port: 80
+
+wifi:  
+  ap: {} # This spawns an AP with the device name and mac address with no password.
+
+captive_portal:
+
+binary_sensor:
+  - platform: status
+    name: "${friendly_name} Status"
+
+sensor:
+  - platform: uptime
+    name: "${friendly_name} Uptime Sensor"
+
+switch:
+  - platform: restart
+    id: restart_switch
+    name: "${friendly_name} Restart"
 
   # https://templates.blakadder.com/aoycocr_X5P.html
   # https://www.esphome-devices.com/devices/Aoycocr-X10S-Plug/
