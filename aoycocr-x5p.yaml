@@ -55,37 +55,32 @@ binary_sensor:
     on_press:
       switch.toggle: relay
 
-switch:
-- platform: gpio
-  pin: GPIO15
-  id: relay
-- platform: gpio
-  pin: GPIO0
-  inverted: true
-  id: red_led
-
 
   # https://esphome.io/components/switch/index.html
 switch:
-- platform: output
+- platform: gpio
   name: "${friendly_name} Relay"
-  output: 'relay'
-  output: 'red_led'
+  id: relay
+  pin: GPIO15
   # Off on power-on
   restore_mode: ALWAYS_OFF
-  
+  # Red LED follows relay state
+  on_turn_on:
+    then:
+    - output.turn_on: red_led
+  on_turn_off:
+    then:
+    - output.turn_off: red_led
 - platform: restart
   id: restart_switch
   name: "${friendly_name} Restart"
 
-#- platform: gpio
-#  name: "${friendly_name} Red Led"
-#  id: red_led
-#  pin: 
-#    number: GPIO0
-#    inverted: true
-    # Off on power-on
-#  restore_mode: ALWAYS_OFF
+output:
+- platform: gpio
+  id: red_led
+  pin: 
+    number: GPIO0
+    inverted: true
   
   # https://esphome.io/components/status_led.html
 status_led:
