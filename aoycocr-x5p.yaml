@@ -2,6 +2,7 @@ substitutions:
   friendly_name: "Aoycocr X5P"
   project_name: "aoycocr.x5p"
   project_version: "1.0"
+  name: aoycocr-x5p
   
 esphome:
   name: "${name}"
