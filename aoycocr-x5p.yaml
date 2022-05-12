@@ -60,7 +60,7 @@ binary_sensor:
   # https://esphome.io/components/switch/index.html
 switch:
 - platform: gpio
-  name: "${friendly_name} Relay"
+  name: "${friendly_name}"
   id: relay
   pin: GPIO15
   # Off on power-on
