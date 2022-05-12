@@ -1,5 +1,4 @@
 substitutions:
-  name: aoycocr-x5p
   friendly_name: "Aoycocr X5P"
   project_name: "aoycocr.x5p"
   project_version: "1.0"
