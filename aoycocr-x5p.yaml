@@ -80,12 +80,12 @@ output:
 - platform: gpio
   id: red_led
   pin: 
-    number: GPIO0
+    number: GPIO2
     inverted: true
   
   # https://esphome.io/components/status_led.html
 status_led:
   pin:
     # Blue LED
-    number: GPIO2
+    number: GPIO0
     inverted: true
