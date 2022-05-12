@@ -11,7 +11,7 @@ esphome:
     version: "${project_version}"
 
 dashboard_import:
-  package_import_url: github://th0mpy/esphomeconfigs/aoycocr_x5p.yaml
+  package_import_url: github://th0mpy/esphomeconfigs/aoycocr-x5p.yaml
 
 
 esp8266:
