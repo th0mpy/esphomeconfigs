@@ -73,6 +73,15 @@ light:
     warm_white_color_temperature: 2700 K
     #restore_mode: ALWAYS_ON
     color_interlock: true
+    effects:
+      - flicker:
+          intensity: 2.5%
+          alpha: 98%
+      - pulse:
+          update_interval: 0.05s
+          transition_length: 0.05s
+      - strobe:
+      - random:
 
 text_sensor:
   - platform: wifi_info
