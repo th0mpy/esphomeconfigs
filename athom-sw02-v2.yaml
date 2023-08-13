@@ -1,6 +1,6 @@
 substitutions:
   device_name: "athom-2gang-switch-v2"
-  project_name: "Athom Technology.2 Gang Switch V2"
+  project_name: "athom.sw02"
   project_version: "1.1"
   light1_restore_mode: RESTORE_DEFAULT_OFF
   light2_restore_mode: RESTORE_DEFAULT_OFF
@@ -30,8 +30,8 @@ logger:
 mdns:
   disabled: false
 
-web_server:
-  port: 80
+#web_server:
+#  port: 80
 
 wifi:
   ap: {} # This spawns an AP with the device name and mac address with no password.
